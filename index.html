@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 36, 121, 1) 22%, rgba(0, 212, 255, 1) 100%);
+            color: #ffff;
+            font-family: "Poppins", serif;
+            ;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(3, 10, 111);
+            padding: 1rem;
+            position: fixed;
+            top: 0px;
+            width: 100vw;
+            /* ???? */
+            z-index: 1000;
+
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+            /* justify-content: center; */
+            list-style: none;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            font-weight: bolder;
+            margin: 0 23px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .first-section {
+            display: flex;
+            text-align: center;
+            padding: 2rem 1rem;
+            align-items: center;
+            justify-content: space-around;
+            margin: 130px 0;
+            gap: 2rem;
+
+        }
+
+        .first-section>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            /* background-color: gold; */
+            font-size: 2.5rem;
+            margin: 60px;
+            color: antiquewhite;
+        }
+
+        .purple {
+            color: brown
+        }
+
+        .right-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: silver;
+            font-size: 1.1rem;
+
+        }
+
+        #element {
+            color: violet;
+        }
+
+        .second-section {
+            max-width: 80vw;
+            height: 80vh;
+            width: 60vw;
+            margin: auto;
+            color: yellowgreen;
+            font-weight: 100;
+            font-size: 1.8rem;
+            /* background-color: aquamarine; */
+        }
+
+        .second-section .box {
+            background: white;
+            width: 76vw;
+            height: 2px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+        .second-section .vertical {
+            height: 93px;
+            width: 2px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        main hr {
+            border: 0;
+            background: aqua;
+            height: 1.2px;
+            margin: 80px 0;
+        }
+
+        .text-grey {
+            color: white;
+            font-weight: 200;
+        }
+
+        .image-top {
+            height: 30px;
+            width: 35px;
+            position: relative;
+            top: -32px;
+            left: -14px;
+
+        }
+
+        .vertical-title {
+            color: rgb(216, 204, 216);
+            position: relative;
+            width: 150px;
+            top: 55px;
+            left: -5px;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        .vertical-desc {
+            /* gap: 2px; */
+            font-size: 9px;
+            position: relative;
+            top: -10;
+        }
+
+        .text-gold {
+            color: gold;
+            font-weight: bolder;
+            font-size: 1.1rem;
+
+        }
+
+        @media(min-width: 768px) {
+            .first-section {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            footer {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .footer-content .social-links a:hover {
+                color: silver;
+            }
+
+            @media(min-width: 768px) {
+                .footer-content {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+            /* From Uiverse.io by cssbuttons-io */
+            button {
+                --glow-color: rgb(217, 176, 255);
+                --glow-spread-color: rgba(191, 123, 255, 0.781);
+                --enhanced-glow-color: rgb(231, 206, 255);
+                --btn-color: rgb(100, 61, 136);
+                border: .25em solid var(--glow-color);
+                padding: 1em 3em;
+                color: var(--glow-color);
+                font-size: 15px;
+                font-weight: bold;
+                background-color: var(--btn-color);
+                border-radius: 1em;
+                outline: none;
+                box-shadow: 0 0 1em .25em var(--glow-color),
+                    0 0 4em 1em var(--glow-spread-color),
+                    inset 0 0 .75em .25em var(--glow-color);
+                text-shadow: 0 0 .5em var(--glow-color);
+                position: relative;
+                transition: all 0.3s;
+            }
+
+            button::after {
+                pointer-events: none;
+                content: "";
+                position: absolute;
+                top: 120%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: var(--glow-spread-color);
+                filter: blur(2em);
+                opacity: .7;
+                transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+            }
+
+            button:hover {
+                color: var(--btn-color);
+                background-color: var(--glow-color);
+                box-shadow: 0 0 1em .25em var(--glow-color),
+                    0 0 4em 2em var(--glow-spread-color),
+                    inset 0 0 .75em .25em var(--glow-color);
+            }
+
+            button:active {
+                box-shadow: 0 0 0.6em .25em var(--glow-color),
+                    0 0 2.5em 2em var(--glow-spread-color),
+                    inset 0 0 .5em .25em var(--glow-color);
+            }
+
+            /* From Uiverse.io by faizanullah1999 */
+            .primary-button {
+                font-family: 'Ropa Sans', sans-serif;
+                /* font-family: 'Valorant', sans-serif; */
+                color: white;
+                cursor: pointer;
+                font-size: 13px;
+                font-weight: bold;
+                letter-spacing: 0.05rem;
+                border: 1px solid #0E1822;
+                padding: 0.8rem 2.1rem;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+                background-color: #0E1822;
+                background-size: 200%;
+                background-position: 200%;
+                background-repeat: no-repeat;
+                transition: 0.3s ease-in-out;
+                transition-property: background-position, border, color;
+                position: relative;
+                z-index: 1;
+            }
+
+            .primary-button:hover {
+                border: 1px solid #FF4655;
+                color: white;
+                background-position: 40%;
+            }
+
+            .primary-button:before {
+                content: "";
+                position: absolute;
+                background-color: #0E1822;
+                width: 0.2rem;
+                height: 0.2rem;
+                top: -1px;
+                left: -1px;
+                transition: background-color 0.15s ease-in-out;
+            }
+
+            .primary-button:hover:before {
+                background-color: white;
+            }
+
+            .primary-button:hover:after {
+                background-color: white;
+            }
+
+            .primary-button:after {
+                content: "";
+                position: absolute;
+                background-color: #FF4655;
+                width: 0.3rem;
+                height: 0.3rem;
+                bottom: -1px;
+                right: -1px;
+                transition: background-color 0.15s ease-in-out;
+            }
+
+            .button-borders {
+                position: relative;
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .button-borders:before {
+                content: "";
+                position: absolute;
+                width: calc(100% + 0.5em);
+                height: 50%;
+                left: -0.3em;
+                top: -0.3em;
+                border: 1px solid #0E1822;
+                border-bottom: 0px;
+                /* opacity: 0.3; */
+            }
+
+            .button-borders:after {
+                content: "";
+                position: absolute;
+                width: calc(100% + 0.5em);
+                height: 50%;
+                left: -0.3em;
+                bottom: -0.3em;
+                border: 1px solid #0E1822;
+                border-top: 0px;
+                /* opacity: 0.3; */
+                z-index: 0;
+            }
+
+            .shape {
+                fill: #0E1822;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">MaFiA's Portfolio</div>
+            <div class="right">
+                <ul>
+
+                    <a href="http://127.0.0.1:5500/webProject/Portfolio.html#">
+                        <li>
+                            <div class="button-borders">
+                                <button class="primary-button"> Home
+                                </button>
+                            </div>
+                    </a></li>
+                    <a href="#">
+                        <li>
+                            <div class="button-borders">
+                                <button class="primary-button"> About
+                                </button>
+                            </div>
+                    </a></li>
+                    <a href="#">
+                        <li>
+                            <div class="button-borders">
+                                <button class="primary-button"> Services
+                                </button>
+                            </div>
+                    </a></li>
+                    <a href="#">
+                        <li>
+                            <div class="button-borders">
+                                <button class="primary-button"> Projects
+                                </button>
+                            </div>
+                    </a></li>
+                    <a href="mailto:mihirparida15@gmail.com">
+                        <li>
+                            <div class="button-borders">
+                                <button class="primary-button"> Contact Us
+                                </button>
+                            </div>
+                    </a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first-section">
+            <div class="leftsection">
+
+                <div>Hello I am <span class="purple">Mihir</span> </div>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            </div>
+            <div class="right-section">
+
+                <img src="./portfolio.jpg" alt="">
+            </div>
+        </section>
+        <hr>
+        <!-- SECOND SECTION -->
+        <section class="second-section">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="devloper.png" alt="Devloper image">
+                    <div class="vertical-title">
+                        <span class="text-gold"> Web Developer(2023-2024)</span>
+
+                        <div class="vertical-desc">
+                            Hi, I'm Mihir – a passionate Web Developer.I specialize in crafting responsive, user-focused
+                            websites with clean, effective code and visually engaging designs. My expertise spans
+                            front-end technologies like HTML, CSS, and JavaScript, alongside experience in backend
+                            development and cybersecurity. I love turning ideas into functional and creative web
+                            experiences.Let's connect and create something impactful!
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="./network.jpg" alt="Devloper image">
+                    <div class="vertical-title">
+                        <span class="text-gold"> Network Engineer(2024)</span>
+
+                        <div class="vertical-desc">
+
+                            Hi, I'm Mihir – a skilled Network Engineer.
+
+                            With a focus on ensuring robust, secure, and efficient network infrastructures, I work to
+                            keep systems connected and data protected. Experienced in network configuration,
+                            troubleshooting, and optimizing performance, I strive to deliver seamless connectivity and
+                            strong cybersecurity measures. My goal is to build resilient networks that empower
+                            businesses to operate smoothly.
+
+                            Let’s connect to discuss network solutions!
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="./securityanalyst.jpg" alt="Devloper image">
+                    <div class="vertical-title">
+                        <span class="text-gold">Security Analyst</span>
+
+                        <div class="vertical-desc">
+                            Hi, I'm Mihir – a dedicated Security Analyst.
+
+                            I specialize in identifying vulnerabilities, monitoring threats, and implementing strategies
+                            to protect systems and data. With experience in threat analysis, risk management, and
+                            proactive security measures, I’m passionate about keeping digital environments secure. My
+                            goal is to stay one step ahead of potential risks, ensuring a safer, more resilient network.
+
+                            Let's connect to strengthen security together!
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="./cyber.jpg" alt="Devloper image">
+                    <div class="vertical-title">
+                        <span class="text-gold">Cyber Expert</span>
+
+                        <div class="vertical-desc">
+                            Hi, I'm Mihir – a Cybersecurity Expert.
+
+                            With a deep understanding of cybersecurity principles and a proactive approach to digital
+                            defense, I specialize in safeguarding systems against cyber threats. From threat
+                            intelligence to intrusion detection and response, my focus is on creating resilient security
+                            frameworks that protect data and maintain trust. I’m dedicated to staying ahead of emerging
+                            threats and building robust, adaptive defenses.
+
+                            Let’s connect to enhance cybersecurity together!
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- Existing head content here -->
+    </head>
+
+    <body>
+        <!-- Existing body content (header, main) here -->
+
+        <!-- Footer Section -->
+        <footer
+            style="background-color: rgb(3, 10, 111); color: #fff; padding: 2rem 1rem; text-align: center; font-family: 'Poppins', sans-serif;">
+            <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <h2 style="font-size: 1.5rem;">Contact Me</h2>
+                <p style="max-width: 600px;">Feel free to reach out for collaborations or just a friendly hello!</p>
+                <div class="social-links" style="display: flex; gap: 1.5rem;">
+
+                    <a href="https://www.linkedin.com/in/mihir-parida-43b0aa295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #fff; text-decoration: none;">
+                        <button>LinkedIn</button></a>
+                    <a href="https://github.com/Mihir09CS" target="_blank" style="color: #fff; text-decoration: none;"> <button>GitHub</button></a>
+                    <a href="https://www.facebook.com/share/zy5fPPgAsPjp5iJX/?mibextid=qi2Omg" target="_blank" style="color: #fff; text-decoration: none;">
+                        <button>Facebook</button></a>
+                    <a href="http://wa.me/917327958321" target="_blank" style="color: #fff; text-decoration: none;">
+
+                        <button>Whatsapp
+                        </button></a>
+                    <a href="http://instagram.com/mihir_parida_07" target="_blank"
+                        style="color: #fff; text-decoration: none;">
+                        <button>Instagram</button></a>
+
+                </div>
+                <p style="font-size: 0.9rem;">&copy; 2024 Mihir. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Existing scripts here -->
+    </body>
+
+    </html>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Photographer', ' Cyber expert.', 'Web Devloper.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
